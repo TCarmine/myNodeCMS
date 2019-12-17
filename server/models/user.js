@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 // First we gonna create our User list
-var User = new keystone.List('User');
+var User = new keystone.List('UserCMS');
 
 // Then we gonna add the fields 
 User.add({
