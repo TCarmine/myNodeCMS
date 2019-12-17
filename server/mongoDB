@@ -1,0 +1,13 @@
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+sudo service mongod start // start service
+
+sudo service mongod status // check status
+
+sudo service mongod stop
+
+sudo service mongod restart
+
+mongo // starting shell
+
+show dbs // show all MondoDB Databases
