@@ -8,6 +8,7 @@
     "checkMongo": "sudo service mongod status",
     "cleanPort": "kill -9 $(lsof -t -i:3000)",
     "start": "node index.js",
+    "compile": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carmine",
