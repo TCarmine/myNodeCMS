@@ -4,9 +4,9 @@
   "description": "Keystone JS CMS with React and Redux",
   "main": "index.js",
   "scripts": {
-    "startMongo":"sudo service mongod start",
-    "checkMongo":"sudo service mongod status",
-    "cleanPort": "kill -9 $(lsof -t -i:3000)",    
+    "startMongo": "sudo service mongod start",
+    "checkMongo": "sudo service mongod status",
+    "cleanPort": "kill -9 $(lsof -t -i:3000)",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,13 @@
   "dependencies": {
     "keystone": "^4.2.1",
     "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10"
   }
 }
