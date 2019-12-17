@@ -1,15 +1,14 @@
 var keystone = require('keystone');
-var Types = keystone.Field.Types;
+var UserCMS = keystone.list('UserCMS');
 
-// First we gonna create our User list
-var User = new keystone.List('User');
+exports = module.exports = function (done) {
+	new UserCMS.model({
+		name: { first: 'admin', last: 'userAdmin' },
+		email: 'carmine.tambascia@gmail.com',
+		password: 'admin',
+		canAccessKeystone: true,
+	}).save(done);
 
-// Then we gonna add the fields 
-User.add({
-  name: { type: Types.Name, required: true, index: true },
-  email: { type: Types.Email, initial: true, required: true, index: true },
-  password: { type: Types.Password, initial: true },
-  canAccessKeystone: { type: Boolean, initial: true },
-});
+};
 
-User.register();
+

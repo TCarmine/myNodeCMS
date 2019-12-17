@@ -20,7 +20,7 @@ keystone.init({
   // Whether to enable built-in authentication for Keystone's Admin UI,
   'auth': true,
   // The key of the Keystone List for users, required if auth is set to true
-  'user model': 'User',
+  'user model': 'UserCMS',
   // The encryption key to use for your cookies.
   'cookie secret': '6D61822FBEAED8635A4A52241FEC3',
 });
