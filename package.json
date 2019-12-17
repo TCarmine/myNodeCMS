@@ -4,6 +4,8 @@
   "description": "Keystone JS CMS with React and Redux",
   "main": "index.js",
   "scripts": {
+    "startMongo":"sudo service mongod start",
+    "checkMongo":"sudo service mongod status",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
