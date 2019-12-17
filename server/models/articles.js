@@ -3,7 +3,7 @@ var Types = keystone.Field.Types;
 var path = require('path');
 
 // Create a new Keystone list called Recipe
-var Recipe = new keystone.List('Article', {
+var Article = new keystone.List('Article', {
   autokey: { path: 'slug', from: 'name', unique: true },
   defaultSort: '-createdAt',
 });
