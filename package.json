@@ -14,6 +14,8 @@
   "author": "Carmine",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-react": "^7.7.4",
+    "babel": "^6.23.0",
     "keystone": "^4.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
