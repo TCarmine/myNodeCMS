@@ -1,6 +1,8 @@
+// This is the KeystoneJS configuration as "Settings" in Django
+// This with yo generator is called keystone.js
 // localhost:27017 default but can be checked with sudo lsof -iTCP -sTCP:LISTEN | grep mongo
 
-//This with yo generator is called keystone.js
+
 //import keystone
 var keystone = require('keystone');
 
@@ -32,7 +34,7 @@ keystone.init({
 // Load your project's Models
 keystone.import('./server/models');
 
-// Add routes later 
+// register our routes
 keystone.set('routes', require('./server/routes'));
 
 // Start Keystone

@@ -23,10 +23,17 @@ module.exports = {
      			use: {
 					loader: 'babel-loader',
 					options: {
+						// since Babel 7
 						presets: ['@babel/react', '@babel/preset-env'],
 			            plugins: ['@babel/plugin-proposal-class-properties']
 					},
-				},
+					loader:'file-loader',
+                    loader: 'image-webpack-loader',
+                       options: {
+							bypassOnDebug: true, // webpack@1.x
+							disable: true, // webpack@2.x and newer
+                       },
+               },
       },
     ]
 	},
