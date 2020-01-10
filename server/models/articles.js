@@ -4,7 +4,10 @@ let path = require('path');
 
 // Create a new Keystone list called Recipe
 let Article = new keystone.List('Article', {
-  autokey: { path: 'slug', from: 'name', unique: true },
+  map:{name:'title'},
+  singular:'Article',  
+  plural:'Articles',
+  autokey: { path: 'slug', from: 'title', unique: true },
   defaultSort: '-createdAt',
 });
 
