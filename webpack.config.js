@@ -32,14 +32,18 @@ module.exports = {
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				use: [
-				  'file-loader',
-				  loader: 'image-webpack-loader',
-						options: {
-							bypassOnDebug: true, // webpack@1.x
-							disable: true, // webpack@2.x and newer
-						},	 
-				],
-			},
+					'file-loader',
+					{
+					  loader: 'image-webpack-loader',
+					  options: {
+						bypassOnDebug: true, // webpack@1.x
+						disable: true, // webpack@2.x and newer
+						publicPath: 'server/public/img',
+                        outputPath: 'server/public/img'
+					  },
+					},
+				  ],
+		    },
 			
     ],
 	},
