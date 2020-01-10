@@ -5,7 +5,7 @@ exports = module.exports = function (app) {
     // Render some simple boilerplate html
     function renderFullPage() {
     // Note the div class name here, we will use that as a hook for our React code
-   // We are also adding the bundled javascript code 
+   //  We are also adding the bundled javascript code 
       return `
 		<!doctype html>
 		<html>

@@ -27,15 +27,16 @@ module.exports = {
 						presets: ['@babel/react', '@babel/preset-env'],
 			            plugins: ['@babel/plugin-proposal-class-properties']
 					},
-					loader:'file-loader',
-                    loader: 'image-webpack-loader',
-                       options: {
-							bypassOnDebug: true, // webpack@1.x
-							disable: true, // webpack@2.x and newer
-                       },
-               },
-      },
-    ]
+			    },
+			},
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+				  'file-loader',
+				],
+	       },
+			
+    ],
 	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.scss'],
