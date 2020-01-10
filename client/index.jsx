@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import BerlinI from '../server/img/Berlin.jpg';
+// import BerlinI from '../server/img/Berlin.jpg';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
     This a random image I made, feel free to skip this in your code
     If you want to add your own image you can add it to the server/public/img folder 
     */}
-      <img style={{width: '300px', height: '300px'}} src={BerlinI}/>
+      <img style={{width: '300px', height: '300px'}} src={require('../server/img/Berlin.jpg')}/>
     <h2>Last Published Blog Posts</h2>
     <ul>
       <li>Anonymous Function aren't always Lambda and viceversa</li>
