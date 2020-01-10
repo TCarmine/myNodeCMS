@@ -1,15 +1,15 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
-var path = require('path');
+let keystone = require('keystone');
+let Types = keystone.Field.Types;
+let path = require('path');
 
 // Create a new Keystone list called Recipe
-var Article = new keystone.List('Article', {
+let Article = new keystone.List('Article', {
   autokey: { path: 'slug', from: 'name', unique: true },
   defaultSort: '-createdAt',
 });
 
 // Adding the option to add an image to our Recipe from 
-var articleImgStorage = new keystone.Storage({
+let articleImgStorage = new keystone.Storage({
   adapter: keystone.Storage.Adapters.FS,
   fs: {
      // required; path where the files should be stored

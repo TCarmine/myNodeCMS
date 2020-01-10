@@ -1,8 +1,9 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+// basic boilerplate
+let keystone = require('keystone');
+let Types = keystone.Field.Types;
 
-// First we gonna create our User list
-var UserCMS = new keystone.List('UserCMS');
+// The User would conflict with others app name on compiling time
+let UserCMS = new keystone.List('UserCMS');
 
 // Then we gonna add the fields 
 UserCMS.add({

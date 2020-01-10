@@ -1,5 +1,6 @@
 // localhost:27017 default but can be checked with sudo lsof -iTCP -sTCP:LISTEN | grep mongo
 
+//This with yo generator is called keystone.js
 //import keystone
 var keystone = require('keystone');
 
