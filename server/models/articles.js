@@ -28,7 +28,7 @@ let articleImgStorage = new keystone.Storage({
 
 // Finally we are gonna add the fields for our Recipe
 Article.add({
-  name: { 
+  title: { 
     type: String, 
     required: true },
   state: { 
