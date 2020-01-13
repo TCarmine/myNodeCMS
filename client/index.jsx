@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import BerlinI from '../server/img/Berlin.jpg';
+import { Provider } from 'react-redux';
 
 const App = () => {
   return (
