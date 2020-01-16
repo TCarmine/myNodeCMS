@@ -2,7 +2,7 @@ let keystone = require('keystone');
 let Types = keystone.Field.Types;
 let path = require('path');
 
-// Create a new Keystone list called Recipe
+// Create a new Keystone list called Article
 let Article = new keystone.List('Article', {
   map:{name:'title'},
   singular:'Article',  
@@ -11,7 +11,7 @@ let Article = new keystone.List('Article', {
   defaultSort: '-createdAt',
 });
 
-// Adding the option to add an image to our Recipe from 
+// Adding the option to add an image to our Article
 let articleImgStorage = new keystone.Storage({
   adapter: keystone.Storage.Adapters.FS,
   fs: {
@@ -26,7 +26,7 @@ let articleImgStorage = new keystone.Storage({
   },
 });
 
-// Finally we are gonna add the fields for our Recipe
+// Finally we are gonna add the fields for our Article
 Article.add({
   title: { 
     type: String, 

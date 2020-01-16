@@ -4,7 +4,7 @@
 
 
 //import keystone
-var keystone = require('keystone');
+let keystone = require('keystone');
 
 // Set up our keystone instance
 keystone.init({
