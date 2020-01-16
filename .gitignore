@@ -1,4 +1,7 @@
 node_modules
 /server/public/js
 settings
-./png
+./*.jpg\n 
+./*.jpeg\n
+./*.png\n
+./*.gif\n 
