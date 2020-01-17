@@ -2,27 +2,32 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import BerlinI from '../server/img/Berlin.jpg';
 import { Provider } from 'react-redux';
+// We will need to import this from redux to create our store and make use of the thunk
+import { createStore, applyMiddleware } from 'redux';
+// Dont forget to import redux thunk
+import thunk from 'redux-thunk';
+// Getting our combined reducers
+import reducers from './reducers/reducers';
+// And our Recipe component
+import Article from './containers/Article';
 
+// This will be the entry point of our app
 const App = () => {
-  return (
-    <div>
-    <h1> List of last Posts </h1>
-   {/* 
-    This a random image I made, feel free to skip this in your code
-    If you want to add your own image you can add it to the server/public/img folder 
-    */}
-      <img style={{width: '300px', height: '300px'}} src={BerlinI}/>
-    <h2>Last Published Blog Posts</h2>
-    <ul>
-      <li>Anonymous Function aren't always Lambda and viceversa</li>
-      <li>Debug Promises in Visual Studio Code</li>
-      <li>Keystone, let's start with React Frontend</li>
-    </ul>
-    <h2> Others </h2>
-    <p> Check List </p>
-    </div>
-  );
+	return (
+	// We will add our components here
+		<div>
+			<Article />
+		</div>
+	);
 };
+
+ReactDOM.render(
+	// We need to wrap our app in provider to make use of redux
+	// Passing our store to the provider
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.querySelector('.react-container'));
 
 ReactDOM.render(
   <App />,
