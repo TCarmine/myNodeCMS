@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import getArticles from './recipe_actions/get_articles.js';
-import loadingArticles from './recipe_actions/loading_articles.js';
+import getArticles from './article_actions/get_articles.js';
+import loadingArticles from './article_actions/loading_articles.js';
 
 const reducers = combineReducers({
   articles: getArticles,
