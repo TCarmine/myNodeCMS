@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // Remember our thunk this is where we will need to make use of it
-import { articlesFetchData } from '../actions/actions';
+import { articlesFetchData } from '../actions/actions.js';
 // We gonna use lodash to map over our articles object
 import _ from 'lodash';
 
 class Article extends Component {
   constructor(props) {
     super(props);
-    // Bind our render article to function so we can use it in the render method 
+    // Bind our render article to function so we can use it in the render method
     this.renderArticle = this.renderArticle.bind(this)
   }
 
@@ -33,30 +33,20 @@ class Article extends Component {
           return;
         }
       };
-      
       // Make sure we show only published articles
       if (article.state = "published") {
-      return (
-        <div key={article._id}>
-          <h1>{article.name}</h1>
-          <img style={{ width: '300px', height: '300px' }} src={img} />
-          <h2>Article List</h2>
-          {/* 
-          In react we cant set HTML directly we need to use dangerouslySetInnerHTML.
-          */}
-          <div dangerouslySetInnerHTML={createMarkupForArticles()} />
-          <h2>  Instructions </h2>
-          {/* 
-          Same as above
-          */}
-          
-        </div>
-      );
-    }
-    });
-  }
+        return (
+          <div key={article._id}>
+            <h1>{article.name}</h1>
+            <img style={{ width: '300px', height: '300px' }} src={img} />
+            <h2>Article List</h2>
+          </div>  
+        );
+      }
+   });
+}
   render() {
-    // If data is still loading 
+    // If data is still loading
     if (this.props.loading) {
       return (
         <div>
@@ -64,13 +54,13 @@ class Article extends Component {
         </div>
       );
     }
-    // Show recipe once data is loaded
-      return (
+    // Show article once data is loaded
+    return (
         <div>
         {this.renderArticle()}
         </div>
       );
-};
+  };
 };
 
 function mapStateToProps(state, ownProps) {
