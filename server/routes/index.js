@@ -12,14 +12,14 @@ let routes = {
 // CORS config, like origin, header and methods:
 keystone.set('cors allow origin', true);
 keystone.get('cors allow methods', true)
-keystone.get('cors allow methods', headers)
+keystone.get('cors allow methods', true)
 
 // Apply CORS to all routes:
 
-app.all('/*', keystone.middleware.cors);
+
 // Export our app routes
 exports = module.exports = function (app) {
- 
+   app.all('/*', keystone.middleware.cors);
    app.get('/api/articles/', keystone.middleware.api, routes.api.listArticle.list);
    // Set up the default app route to  http://localhost:3000/index.html
    app.get('/index.html', function (req, res) {
