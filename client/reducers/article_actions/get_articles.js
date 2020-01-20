@@ -1,4 +1,4 @@
-import { GET_ARTICLES } from '../../actions/actions';
+import { GET_ARTICLES } from './actions';
 
 export default function getArticle(state = {}, action) {
   switch (action.type) {
