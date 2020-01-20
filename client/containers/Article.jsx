@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // Remember our thunk this is where we will need to make use of it
-import { articlesFetchData } from '../reducers/article_actions/actions';
+import { articlesFetchData } from '../actions/actions';
 // We gonna use lodash to map over our articles object
 import _ from 'lodash';
 
