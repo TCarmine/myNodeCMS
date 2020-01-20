@@ -1,18 +1,28 @@
 let keystone = require('keystone');
 
+
 // Then to get access to our API route we will use importer
 let importRoutes = keystone.importer(__dirname);
 // And finally set up the api on a route
+
+
 let routes = {
   api: importRoutes('./api'),
 };
+// CORS config, like origin, header and methods:
+keystone.set('cors allow origin', true);
+keystone.get('cors allow methods', true)
+keystone.get('cors allow methods', headers)
 
+// Apply CORS to all routes:
+
+app.all('/*', keystone.middleware.cors);
 // Export our app routes
 exports = module.exports = function (app) {
  
-  app.get('/api/articles/', keystone.middleware.api, routes.api.listArticle.list);
-    // Set up the default app route to  http://localhost:3000/index.html
-  app.get('/index.html', function (req, res) {
+   app.get('/api/articles/', keystone.middleware.api, routes.api.listArticle.list);
+   // Set up the default app route to  http://localhost:3000/index.html
+   app.get('/index.html', function (req, res) {
     // Render some simple boilerplate html
     function renderFullPage() {
     // Note the div class name here, we will use that as a hook for our React code
@@ -29,7 +39,7 @@ exports = module.exports = function (app) {
 				<script src="bundle.js"></script>
 			</body>
 		</html>
-		`;
+    `;
     }
     // Send the html boilerplate
     res.send(renderFullPage());
