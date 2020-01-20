@@ -30,6 +30,3 @@ ReactDOM.render(
 	</Provider>,
 	document.querySelector('.react-container'));
 
-ReactDOM.render(
-  <App />,
-  document.querySelector('.react-container'));
