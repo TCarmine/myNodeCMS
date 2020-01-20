@@ -11,6 +11,7 @@ import reducers from './reducers/reducers';
 // And our Recipe component
 import Article from './containers/Article';
 
+const store = createStore(reducers, applyMiddleware(thunk));
 // This will be the entry point of our app
 const App = () => {
 	return (
