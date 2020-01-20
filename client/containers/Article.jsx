@@ -14,7 +14,7 @@ class Article extends Component {
 
   // Fetch articles when component is mounted
   componentDidMount() {
-    const API_URL = 'http://localhost:3000/api/recipe/?list';
+    const API_URL = 'http://localhost:3000/api/articles/?listArticle';
     // Only in development setting some delay to simulate a real world request
     setTimeout(() => { this.props.fetchArticle(API_URL); }, 1000);
   }
