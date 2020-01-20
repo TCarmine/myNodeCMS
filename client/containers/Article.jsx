@@ -19,20 +19,16 @@ class Article extends Component {
     setTimeout(() => { this.props.fetchArticle(API_URL); }, 1000);
   }
 // Function to render our recipe
-  renderArticle() {
-    return _.map(this.props.article, article => {
+   renderArticle() {
+    return _.map(this.props.articles, article => {
       // Check if there is an image to be displayed
       const img = article.image ? article.image.filename : '';
       // Get the html for our recipe ingredients
-      function createMarkupForArticles() {
-        if (article.articleList) {
-          return {
-            __html: article.articleList,
-          };
-        } else {
-          return;
-        }
-      };
+      // function createMarkupForArticles() {
+      //   return (
+      //       __html: article
+      //   );
+      // };
       // Make sure we show only published articles
       if (article.state = "published") {
         return (
@@ -64,7 +60,7 @@ class Article extends Component {
 };
 
 function mapStateToProps(state, ownProps) {
-  // Things return here are showing in props for Recepie
+  // Things return here are showing in props for Article
   return {
     articles: state.articles,
     loading: state.loadArticles,
