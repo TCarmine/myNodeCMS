@@ -1,4 +1,4 @@
-import { LOADING_ARTICLES } from '../../actions/actions';
+import { LOADING_ARTICLES } from './actions';
 
 export default function loadingArticles(state = true, action) {
   switch (action.type) {
