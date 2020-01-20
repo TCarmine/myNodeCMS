@@ -22,7 +22,6 @@ class Article extends Component {
    renderArticle() {
     return _.map(this.props.articles, article => {
       // Check if there is an image to be displayed
-      const img = article.image ? article.image.filename : '';
       // Get the html for our recipe ingredients
       // function createMarkupForArticles() {
       //   return (
@@ -31,9 +30,11 @@ class Article extends Component {
       // };
       // Make sure we show only published articles
       if (article.state = "published") {
+        const img = article.image ? article.image.filename : '';
         return (
           <div key={article._id}>
             <h1>{article.title}</h1>
+            
             <img style={{ width: '300px', height: '300px' }} src={img} />
             <p>{article.Post}</p>
           </div>  
