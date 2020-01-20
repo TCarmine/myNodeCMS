@@ -20,9 +20,9 @@ class Article extends Component {
   }
 // Function to render our recipe
   renderArticle() {
-    return _.map(this.props.recipes, recipe => {
+    return _.map(this.props.article, article => {
       // Check if there is an image to be displayed
-      const img = recipe.image ? recipe.image.filename : '';
+      const img = article.image ? article.image.filename : '';
       // Get the html for our recipe ingredients
       function createMarkupForArticles() {
         if (article.articleList) {
@@ -37,9 +37,9 @@ class Article extends Component {
       if (article.state = "published") {
         return (
           <div key={article._id}>
-            <h1>{article.name}</h1>
+            <h1>{article.title}</h1>
             <img style={{ width: '300px', height: '300px' }} src={img} />
-            <h2>Article List</h2>
+            <p>{article.Post}</p>
           </div>  
         );
       }

@@ -48,11 +48,11 @@ Article.add({
     storage: articleImgStorage,
     mimetype: '.jpeg, .jpg, .gif, .svg',
   },
-//   PostSummary: { 
-//     type: Types.Html, 
-//     wysiwyg: true, 
-//     height: 150 
-//   },
+  PostSummary: { 
+    type: Types.Html, 
+    wysiwyg: true, 
+    height: 150 
+  },
   Post: {
     type: Types.Html,
     wysiwyg: true,
@@ -61,5 +61,5 @@ Article.add({
 });
 
 // Setting the default order of the columns on the admin tab
-Article.defaultColumns = 'name, state|20%, author, publishedAt|15%';
+Article.defaultColumns = 'state|20%, author, publishedAt|15%';
 Article.register();
