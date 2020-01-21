@@ -49,12 +49,12 @@ Article.add({
     mimetype: '.jpeg, .jpg, .gif, .svg',
   },
   PostSummary: { 
-    type: Types.Html, 
+    type: Types.Textarea, 
     wysiwyg: true, 
     height: 150 
   },
   Post: {
-    type: Types.Html,
+    type: Types.Textarea,
     wysiwyg: true,
     height: 500
   }
