@@ -5,3 +5,4 @@ settings
 /*.jpeg
 /*.png
 /*.gif 
+server/public/img/*
