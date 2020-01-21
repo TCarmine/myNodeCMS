@@ -18,9 +18,11 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				// For pure CSS (without CSS modules)
 				test: /\.css$/i,
-				use: ['css-loader',],
-			},
+				exclude: /\.module\.css$/i,
+				use: ['css-loader'],
+			  },
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
