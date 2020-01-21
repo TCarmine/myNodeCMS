@@ -18,15 +18,23 @@ class Article extends Component {
     // Only in development setting some delay to simulate a real world request
     setTimeout(() => { this.props.fetchArticle(API_URL); }, 1000);
   }
-// Function to render our recipe
+// Function to render our article
    renderArticle() {
     return _.map(this.props.articles, article => {
       if (article.state == "published") {
-        const img = article.image ? article.image.filename : '';
+        if(article.image){
+          const img = article.image ? article.image.filename : '';
+          return (
+            <div key={article._id}>
+              <h1>{article.title}</h1>
+              <img style={{ width: '300px', height: '300px' }} src={img} />
+              <p>{article.Post}</p>
+            </div>  
+          );
+        }
         return (
           <div key={article._id}>
             <h1>{article.title}</h1>
-            <img style={{ width: '300px', height: '300px' }} src={img} />
             <p>{article.Post}</p>
           </div>  
         );
