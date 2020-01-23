@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import BerlinI from '../server/img/Berlin.jpg';
+// import Style from '../server/css/clean-blog.css';
 import { Provider } from 'react-redux';
 // We will need to import this from redux to create our store and make use of the thunk
 import { createStore, applyMiddleware } from 'redux';
@@ -10,6 +11,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers/reducers';
 // And our Recipe component
 import Article from './containers/Article';
+
 
 const store = createStore(reducers, applyMiddleware(thunk));
 // This will be the entry point of our app

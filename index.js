@@ -15,6 +15,7 @@ keystone.init({
   'static': [ 
     './server/public/js/',
     './server/public/img/',
+    './server/public/css/'
   ],
   // Keystone includeed updates framework, 
   // which can enabled by setting the auto update option to true.

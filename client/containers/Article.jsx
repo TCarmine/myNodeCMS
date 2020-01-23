@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { articlesFetchData } from '../actions/actions.js';
 // We gonna use lodash to map over our articles object
 import _ from 'lodash';
-import '../../server/css/clean-blog.min.css';
+import '../../server/css/clean-blog.css';
 
 class Article extends Component {
   constructor(props) {
