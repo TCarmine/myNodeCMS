@@ -5,6 +5,8 @@ module.exports = {
   // Since webpack 4 we will need to set in what mode webpack is running,
   // in dev webpack does not minify
   mode: 'development',
+  // avoid use of eval
+  devtool:none,
 	// This will be the entry file for all of our React code
 	entry: [
 		'./client/index.jsx',
