@@ -1,4 +1,5 @@
 // This is the KeystoneJS configuration as "Settings" in Django
+// This is searched by webpack
 // This with yo generator is called keystone.js
 // localhost:27017 default but can be checked with sudo lsof -iTCP -sTCP:LISTEN | grep mongo
 

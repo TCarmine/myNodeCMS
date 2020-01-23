@@ -1,8 +1,9 @@
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  // Since webpack 4 we will need to set in what mode webpack is running
+  // Since webpack 4 we will need to set in what mode webpack is running,
+  // in dev webpack does not minify
   mode: 'development',
 	// This will be the entry file for all of our React code
 	entry: [
@@ -10,7 +11,7 @@ module.exports = {
 	],
 	// This will be where the final bundle file will be outputed
 	output: {
-		path: path.join(__dirname, '/server/public/js/'),
+		path: path.resolve(__dirname, '/server/public/js/'),
 		filename: 'bundle.js',
 		publicPath: 'server/public/js/',
   },
