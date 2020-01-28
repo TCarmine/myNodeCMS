@@ -1,7 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
+const common = require('./webpack.common');
+const merge = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = merge(common,{
   // Since webpack 4 we will need to set in what mode webpack is running,
   // in dev webpack does not minify
   mode: 'development',
