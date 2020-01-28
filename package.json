@@ -9,7 +9,7 @@
     "checkMongo": "sudo service mongod status",
     "cleanPort": "kill -9 $(lsof -t -i:3000)",
     "start": "node index.js",
-    "compiledev": "webpack --config webpack.config.js"
+    "compiledev": "webpack --config webpack.common.js"
   },
   "author": "Carmine",
   "license": "ISC",
