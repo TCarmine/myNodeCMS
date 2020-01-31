@@ -35,17 +35,13 @@ module.exports = {
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
-				use: [
-					{
-					  loader: 'url-loader',
-					  options: {
-						bypassOnDebug: true, // webpack@1.x
-						disable: true, // webpack@2.x and newer
-						publicPath: './server/public/img',
-                        outputPath: './server/public/img'
-					  },
+				use: {
+					loader: 'file-loader',
+					options: {
+					  name:'[name].[hash][ext]',
+					  outputPath: './server/public/img'	
 					},
-				  ],
+				},
 		    },
 			
     ],
